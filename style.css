@@ -1213,6 +1213,52 @@ section {
 }
 
 /* ============================================================
+   LIGHT MODE OVERRIDES — Fix visual artifacts in light theme
+   ============================================================ */
+
+/* Sport card visual section — the ::after fade is too harsh in light mode
+   because --color-surface is near-white (#faf9f7), making the gradient
+   a solid opaque white band. In light mode, remove the fade entirely. */
+[data-theme="light"] .sport-card__visual::after {
+  display: none;
+}
+
+/* The sport card visual backgrounds are hardcoded dark gradients.
+   In light mode, override them to be subtle tinted backgrounds. */
+[data-theme="light"] .sport-card--ufc    .sport-card__visual { background: linear-gradient(135deg, #ffe8e0 0%, #ffd0c0 100%); }
+[data-theme="light"] .sport-card--raiders .sport-card__visual { background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%); }
+[data-theme="light"] .sport-card--knights .sport-card__visual { background: linear-gradient(135deg, #d0f0d8 0%, #b8e8cc 100%); }
+[data-theme="light"] .sport-card--f1     .sport-card__visual { background: linear-gradient(135deg, #d0f0f8 0%, #b8e8f4 100%); }
+[data-theme="light"] .sport-card--boxing  .sport-card__visual { background: linear-gradient(135deg, #f8d0e8 0%, #f0b8d8 100%); }
+[data-theme="light"] .sport-card--nascar  .sport-card__visual { background: linear-gradient(135deg, #d0e4f8 0%, #b8d4f4 100%); }
+
+/* Home hero background — radial gradients in light mode are too vivid.
+   Reduce intensity significantly so they read as subtle colour tints. */
+[data-theme="light"] .home-hero__bg {
+  background:
+    radial-gradient(ellipse 70% 60% at 65% 35%, color-mix(in srgb, var(--color-primary) 5%, transparent) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 20% 75%, color-mix(in srgb, var(--color-gold) 3%, transparent) 0%, transparent 55%),
+    radial-gradient(ellipse 80% 80% at 50% 50%, color-mix(in srgb, var(--color-primary) 2%, transparent) 0%, transparent 80%);
+}
+
+/* Generic .hero__bg radial — also too vivid in light mode */
+[data-theme="light"] .hero__bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 60% 40%, color-mix(in srgb, var(--color-primary) 5%, transparent) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 10% 80%, color-mix(in srgb, var(--color-gold) 3%, transparent) 0%, transparent 60%);
+}
+
+/* page-hero::before radial — dial back in light mode */
+[data-theme="light"] .page-hero::before {
+  background: radial-gradient(ellipse 70% 80% at 80% 50%, color-mix(in srgb, var(--color-primary) 4%, transparent), transparent 70%);
+}
+
+/* host-cta::before radial */
+[data-theme="light"] .host-cta::before {
+  background: radial-gradient(ellipse 80% 60% at 50% 120%, color-mix(in srgb, var(--color-primary) 4%, transparent), transparent 70%);
+}
+
+/* ============================================================
    RESPONSIVE HELPERS
    ============================================================ */
 @media (max-width: 480px) {

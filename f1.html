@@ -74,6 +74,13 @@
     linear-gradient(180deg, var(--color-bg) 0%, #0a1214 60%, var(--color-bg) 100%);
 }
 
+/* Light mode: remove the hardcoded dark midpoint — use only subtle tints */
+[data-theme="light"] .f1-hero__bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 110%, rgba(0, 153, 170, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 0% 50%, rgba(196, 50, 8, 0.03) 0%, transparent 60%);
+}
+
 /* Speed lines */
 .f1-hero__speed-lines {
   position: absolute;

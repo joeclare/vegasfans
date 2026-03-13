@@ -326,11 +326,14 @@ section {
     position: fixed;
     inset: 56px 0 0 0;
     background: var(--color-bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
     padding: var(--space-8) var(--space-6);
     gap: var(--space-6);
-    z-index: 99;
+    z-index: 200;
     align-items: flex-start;
     border-top: 1px solid var(--color-border);
+    opacity: 1;
   }
 
   .site-nav.open a {

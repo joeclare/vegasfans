@@ -258,9 +258,8 @@ section {
   line-height: 1;
 }
 
-.site-logo__dot {
+.site-logo__accent {
   color: var(--color-primary);
-  font-weight: 400;
 }
 
 .site-nav {
@@ -986,10 +985,12 @@ section {
 }
 
 .site-footer__wordmark {
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  letter-spacing: 0.02em;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--color-text);
+  line-height: 1;
 }
 
 .site-footer__wordmark span {

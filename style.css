@@ -614,7 +614,7 @@ section {
 
 .timeline-item {
   display: grid;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: var(--space-6);
   position: relative;
   padding-bottom: var(--space-8);
@@ -623,7 +623,7 @@ section {
 .timeline-item::before {
   content: '';
   position: absolute;
-  left: 90px;
+  left: 132px;
   top: 28px;
   bottom: 0;
   width: 1px;
@@ -644,7 +644,7 @@ section {
 
 .timeline-dot {
   position: absolute;
-  left: 84px;
+  left: 126px;
   top: 6px;
   width: 13px;
   height: 13px;

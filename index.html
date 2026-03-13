@@ -59,7 +59,7 @@
   .home-hero__content {
     position: relative;
     z-index: 1;
-    padding-block: clamp(var(--space-16), 12vw, var(--space-32));
+    padding-block: clamp(var(--space-8), 5vw, var(--space-16));
   }
 
   .home-hero__kicker {
@@ -445,20 +445,13 @@
 <!-- HEADER -->
 <header class="site-header">
   <div class="container site-header__inner">
-    <a href="index.html" class="site-logo" aria-label="VegasFans home">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-        <rect width="32" height="32" rx="6" fill="currentColor" opacity="0.08"/>
-        <polygon points="16,4 26,12 22,26 10,26 6,12" fill="none" stroke="#e8420a" stroke-width="2" stroke-linejoin="round"/>
-        <polygon points="16,8 22,14 19.5,22 12.5,22 10,14" fill="#e8420a" opacity="0.2"/>
-        <line x1="16" y1="4" x2="16" y2="26" stroke="#e8420a" stroke-width="1.5" opacity="0.5"/>
-        <circle cx="16" cy="16" r="3" fill="#e8420a"/>
-      </svg>
-      <span class="site-logo__wordmark">VEGAS<span>FANS</span></span>
+    <a href="/" class="site-logo" aria-label="VegasFans home">
+      <span class="site-logo__wordmark">VegasFans<span class="site-logo__dot">.com</span></span>
     </a>
     <nav class="site-nav" id="main-nav" aria-label="Main navigation">
-      <a href="ufc.html">UFC</a>
-      <a href="#sports">Sports</a>
-      <a href="#host">The Host</a>
+      <a href="/" class="active">Home</a>
+      <a href="/ufc">UFC</a>
+      <a href="/f1">F1</a>
     </nav>
     <div class="header-actions">
       <button class="theme-toggle" data-theme-toggle aria-label="Switch to light mode">
@@ -529,7 +522,7 @@
     <div class="sports-grid">
 
       <!-- UFC — featured -->
-      <a href="ufc.html" class="sport-card sport-card--ufc sport-card--featured" aria-label="UFC in Las Vegas guide">
+      <a href="/ufc" class="sport-card sport-card--ufc sport-card--featured" aria-label="UFC in Las Vegas guide">
         <div class="sport-card__visual">&#x1F94A;</div>
         <div class="sport-card__body">
           <div class="sport-card__label">Live Now</div>
@@ -541,7 +534,7 @@
       </a>
 
       <!-- F1 — active -->
-      <a href="f1.html" class="sport-card sport-card--f1 sport-card--medium" aria-label="F1 Las Vegas Grand Prix guide">
+      <a href="/f1" class="sport-card sport-card--f1 sport-card--medium" aria-label="F1 Las Vegas Grand Prix guide">
         <div class="sport-card__visual">&#x1F3CE;&#xFE0F;</div>
         <div class="sport-card__body">
           <div class="sport-card__label">Live Now</div>
@@ -646,7 +639,7 @@
         <span class="host-cta__example">"I'm staying at Aria for F1 race week — what's the plan?"</span>
         <span class="host-cta__example">"Raiders tailgate spots near Allegiant?"</span>
       </div>
-      <a href="ufc.html" class="btn btn--primary">Start with UFC &rarr;</a>
+      <a href="/ufc" class="btn btn--primary">Start with UFC &rarr;</a>
     </div>
   </div>
 </section>
@@ -659,9 +652,9 @@
       <p class="site-footer__tagline">Your Host for sports fan life in Las Vegas</p>
     </div>
     <nav class="site-footer__links" aria-label="Footer navigation">
-      <a href="ufc.html">UFC Hub</a>
-      <a href="ufc-330.html">UFC 330</a>
-      <a href="f1.html">F1 Grand Prix</a>
+      <a href="/ufc">UFC Hub</a>
+      <a href="/ufc-330">UFC 330</a>
+      <a href="/f1">F1 Grand Prix</a>
     </nav>
     <div class="site-footer__credit">
       <a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a>

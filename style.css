@@ -57,14 +57,14 @@
    ============================================================ */
 :root, [data-theme="dark"] {
   --color-bg:              #0e0d0c;
-  --color-surface:         #141312;
-  --color-surface-2:       #1a1918;
-  --color-surface-offset:  #222120;
-  --color-border:          #2e2d2b;
-  --color-divider:         #252422;
+  --color-surface:         #1c1a18;
+  --color-surface-2:       #242220;
+  --color-surface-offset:  #2a2826;
+  --color-border:          #383532;
+  --color-divider:         #2e2c2a;
   --color-text:            #f0eeea;
-  --color-text-muted:      #8a8884;
-  --color-text-faint:      #4a4846;
+  --color-text-muted:      #a8a5a0;
+  --color-text-faint:      #6a6864;
   --color-text-inverse:    #0e0d0c;
 
   /* Primary: fight red-orange — Vegas neon energy */
@@ -245,21 +245,22 @@ section {
 .site-logo {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
   text-decoration: none;
   flex-shrink: 0;
 }
 
 .site-logo__wordmark {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  letter-spacing: 0.02em;
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   color: var(--color-text);
   line-height: 1;
 }
 
-.site-logo__wordmark span {
+.site-logo__dot {
   color: var(--color-primary);
+  font-weight: 400;
 }
 
 .site-nav {
